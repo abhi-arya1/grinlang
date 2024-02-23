@@ -1,4 +1,4 @@
-# GrinHighlighter
+# Grin Language Highlighter (grinlang)
 
 This VSCode extension provides syntax highlighting support for GRIN, a programming language made as a project
 for ICS 33 at UC Irvine.

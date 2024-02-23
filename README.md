@@ -4,7 +4,7 @@ This VSCode extension provides syntax highlighting support for GRIN, a programmi
 for ICS 33 at UC Irvine.
 
 ***
-***DISCLAIMER:* This repository does not contain ANY code from the actual project, nor does it guarantee that everything works in your program! Additionally, this repository contains no academically dishonest material and is simply syntactically derived from information directly available on the website linked below. Use this for *fun*!**
+***DISCLAIMER:* This repository does not contain ANY code from the actual project, nor does it guarantee that everything works in your program! Additionally, this repository contains no academically dishonest material and is simply syntactically derived from information directly available on the website linked below. This is also not submitted for credit in any way, and is the sole property of @abhi-arya1. Use this for *fun*!**
 ***
 
 To install, first clone this repository with:

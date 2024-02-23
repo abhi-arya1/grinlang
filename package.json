@@ -3,6 +3,7 @@
   "displayName": "GrinHighlighter",
   "description": "For Grin Language",
   "version": "0.0.1",
+  "repository": "https://github.com/abhi-arya1/GrinHighlighter.git",
   "engines": {
     "vscode": "^1.86.0"
   },

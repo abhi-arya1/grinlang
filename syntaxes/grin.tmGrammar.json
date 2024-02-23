@@ -1,0 +1,128 @@
+{
+  "scopeName": "source.grin",
+  "fileTypes": ["grin"],
+  "patterns": [
+    {
+      "match": "\\b(GOSUB|PRINT|END|INSTR|INNUM|ADD|SUB|MULT|DIV|GOTO|IF|RETURN)\\b",
+      "name": "keyword.control.grin"
+    },
+    {
+      "match": "\"[^\"]*\"",
+      "name": "string.quoted.double.grin"
+    },
+    {
+      "begin": "(f[A-Za-z0-9_]+):",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.grin"
+        }
+      },
+      "end": "(RETURN)",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.grin"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#main"
+        }
+      ]
+    },
+    {
+      "match": "\\b[0-9]+\\b",
+      "name": "constant.numeric.grin"
+    },
+    {
+      "match": "\\b(op|op1|op2)\\b",
+      "name": "variable.other.grin"
+    }
+  ],
+  "repository": {
+    "main": {
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#functions"
+        },
+        {
+          "include": "#variables"
+        },
+        {
+          "include": "#keywords"
+        },
+        {
+          "include": "#numbers"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": ";.*$",
+          "name": "comment.line.semicolon.grin"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"[^\"]*\"",
+          "name": "string.quoted.double.grin"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "begin": "(f[A-Za-z0-9_]+):",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.grin"
+            }
+          },
+          "end": "(RETURN)",
+          "endCaptures": {
+            "1": {
+              "name": "keyword.control.grin"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main"
+            }
+          ]
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "match": "\\b(op|op1|op2)\\b",
+          "name": "variable.other.grin"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(GOSUB|PRINT|END|INSTR|INNUM|ADD|SUB|MULT|DIV|GOTO|IF|RETURN)\\b",
+          "name": "keyword.control.grin"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric.grin"
+        }
+      ]
+    }
+  }
+}

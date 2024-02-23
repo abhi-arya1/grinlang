@@ -1,0 +1,25 @@
+{
+  "name": "grin",
+  "displayName": "GrinHighlighter",
+  "description": "For Grin Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "grin",
+      "aliases": ["grin"],
+      "extensions": [".grin"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "grin",
+      "scopeName": "source.grin",
+      "path": "./syntaxes/grin.tmGrammar.json"
+    }]
+  }
+}
